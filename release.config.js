@@ -22,16 +22,16 @@ module.exports = {
     //   }
     // ],
 
-    './plugin.js',
+    // './plugin.js',
     [{
       generateNotes: function (pluginConfig, context) {
-        console.log(Object.keys(context));
-        console.log(context.nextRelease);
-        console.log(context.branch);
+        console.log('generateNotes', Object.keys(context));
+        // console.log(context.nextRelease);
+        // console.log(context.branch);
         // console.log('analyzeCommits:', args);
       },
       success: function (pluginConfig, context) {
-        console.log('Success:', Object.keys(pluginConfig), '@@', Object.keys(context));
+        // console.log('Success:', Object.keys(pluginConfig), '@@', Object.keys(context));
       },
       fail: function (pluginConfig, context) {
         console.log('Fail:', Object.keys(context));
