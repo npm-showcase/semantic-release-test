@@ -17,7 +17,12 @@ module.exports = {
         message: 'Release <%= nextRelease.version %>\n\n[skip ci]\n\n<%= nextRelease.notes %>',
       },
     ],
-    "semantic-release-github-pullrequest",
+    // [
+    //   "semantic-release-github-pullrequest", {
+    //     "assets": [ "CHANGELOG.md", "package.json" ],
+    //     "baseRef": "main"
+    //   }
+    // ],
 
     './plugin.js',
     [{
