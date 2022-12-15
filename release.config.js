@@ -30,11 +30,12 @@ module.exports = {
         console.log(context.branch);
         // console.log('analyzeCommits:', args);
       },
-      success: function (options, context) {
-        console.log('Success:', Object.keys(options), '@@', Object.keys(context));
+      success: function (pluginConfig, context) {
+        console.log('Success:', Object.keys(pluginConfig), '@@', Object.keys(context));
       },
-      fail: function (a, b) {
-        console.log('Fail:', Object.keys(a), '@@', Object.keys(b));
+      fail: function (pluginConfig, context) {
+        console.log('Fail:', Object.keys(context));
+        console.log(context);
       },
     }],
 
