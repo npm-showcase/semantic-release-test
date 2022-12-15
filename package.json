@@ -1,14 +1,13 @@
 {
   "name": "@npm-showcase/semantic-release-test",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "lint": "echo success",
     "ci": "echo success",
     "prepack": "node -e 'throw new Error(12345);'",
-    "semantic-release": "semantic-release"
+    "release": "semantic-release"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/node": "^18.11.15",
     "@types/semantic-release": "^17.2.4",
@@ -19,5 +18,9 @@
     "@semantic-release/git": "^10.0.1",
     "conventional-changelog-conventionalcommits": "^5.0.0",
     "semantic-release": "^19.0.5"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com"
   }
 }
