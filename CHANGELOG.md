@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.0-beta.6](https://github.com/npm-showcase/semantic-release-test/compare/v1.0.0-beta.5...v1.0.0-beta.6) (2022-12-15)
+
+
+### Bug Fixes
+
+* changelog ([640a300](https://github.com/npm-showcase/semantic-release-test/commit/640a300fb15db90703ea93698f90a0867a1754df))
+* try fail ([aaf20da](https://github.com/npm-showcase/semantic-release-test/commit/aaf20da5b9b3ea6d4abc74179df38199fbc866f4))
+
 ## [1.0.0-beta.5](https://github.com/npm-showcase/semantic-release-test/compare/v1.0.0-beta.4...v1.0.0-beta.5) (2022-12-15)
 
 
