@@ -4,7 +4,7 @@
   "scripts": {
     "lint": "echo success",
     "ci": "echo success",
-    "prepack1": "node -e 'throw new Error(12345);'",
+    "prepack": "node -e 'throw new Error(12345);'",
     "release": "semantic-release"
   },
   "devDependencies": {

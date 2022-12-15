@@ -4,19 +4,17 @@ module.exports = {
     [ '@semantic-release/commit-analyzer', { preset: 'conventionalcommits' } ],
     [ '@semantic-release/release-notes-generator', { preset: 'conventionalcommits' } ],
     [ '@semantic-release/changelog', { changelogTitle: '# Changelog' } ],
-    [ '@semantic-release/npm', {
-      npmPublish: false,
-    } ],
+    [ '@semantic-release/npm' ],
 
     // [ '@semantic-release/exec', {
     //   'publishCmd': 'ls -l dist && ls -l .semantic-release && tar -ztvf .semantic-release/*.tgz',
     // } ],
 
-    // [ '@semantic-release/git',
-    //   {
-    //     message: 'Release <%= nextRelease.version %>\n\n[skip ci]\n\n<%= nextRelease.notes %>',
-    //   },
-    // ],
+    [ '@semantic-release/git',
+      {
+        message: 'Release <%= nextRelease.version %>\n\n[skip ci]\n\n<%= nextRelease.notes %>',
+      },
+    ],
     // [
     //   "semantic-release-github-pullrequest", {
     //     "assets": [ "CHANGELOG.md", "package.json" ],
@@ -26,7 +24,10 @@ module.exports = {
 
     './plugin.js',
     [{
-      analyzeCommits: function (...args) {
+      generateNotes: function (pluginConfig, context) {
+        console.log(Object.keys(context));
+        console.log(context.nextRelease);
+        console.log(context.branch);
         // console.log('analyzeCommits:', args);
       },
       success: function (options, context) {
