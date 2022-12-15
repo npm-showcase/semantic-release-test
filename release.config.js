@@ -21,18 +21,18 @@ module.exports = {
       analyzeCommits: function (...args) {
         // console.log('analyzeCommits:', args);
       },
-      success: function (...args) {
-        console.log('Success:', args);
+      success: function (a, b) {
+        console.log('Success:', Object.keys(a), '@@', Object.keys(b));
       },
-      fail: function (...args) {
-        console.log('Fail:', args);
-      }
+      fail: function (a, b) {
+        console.log('Fail:', Object.keys(a), '@@', Object.keys(b));
+      },
     }],
 
-    // [ '@semantic-release/github',
-    //   {
-    //     addReleases: 'bottom',
-    //   },
-    // ],
+    [ '@semantic-release/github',
+      {
+        addReleases: 'bottom',
+      },
+    ],
   ],
 };
