@@ -4,7 +4,7 @@ module.exports = {
     [ '@semantic-release/commit-analyzer', { preset: 'conventionalcommits' } ],
     [ '@semantic-release/release-notes-generator', { preset: 'conventionalcommits' } ],
     [ '@semantic-release/changelog', { changelogTitle: '# Changelog' } ],
-    // [ '@semantic-release/npm', {} ],
+    [ '@semantic-release/npm', {} ],
 
     // [ '@semantic-release/exec', {
     //   'publishCmd': 'ls -l dist && ls -l .semantic-release && tar -ztvf .semantic-release/*.tgz',

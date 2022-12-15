@@ -1,6 +1,6 @@
 {
   "name": "@npm-showcase/semantic-release-test",
-  "version": "0.0.1",
+  "version": "1.0.0-beta.2",
   "scripts": {
     "lint": "echo success",
     "ci": "echo success",
