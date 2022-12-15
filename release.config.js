@@ -12,11 +12,11 @@ module.exports = {
     //   'publishCmd': 'ls -l dist && ls -l .semantic-release && tar -ztvf .semantic-release/*.tgz',
     // } ],
 
-    [ '@semantic-release/git',
-      {
-        message: 'Release <%= nextRelease.version %>\n\n[skip ci]\n\n<%= nextRelease.notes %>',
-      },
-    ],
+    // [ '@semantic-release/git',
+    //   {
+    //     message: 'Release <%= nextRelease.version %>\n\n[skip ci]\n\n<%= nextRelease.notes %>',
+    //   },
+    // ],
     // [
     //   "semantic-release-github-pullrequest", {
     //     "assets": [ "CHANGELOG.md", "package.json" ],
@@ -29,8 +29,8 @@ module.exports = {
       analyzeCommits: function (...args) {
         // console.log('analyzeCommits:', args);
       },
-      success: function (a, b) {
-        console.log('Success:', Object.keys(a), '@@', Object.keys(b));
+      success: function (options, context) {
+        console.log('Success:', Object.keys(options), '@@', Object.keys(context));
       },
       fail: function (a, b) {
         console.log('Fail:', Object.keys(a), '@@', Object.keys(b));
