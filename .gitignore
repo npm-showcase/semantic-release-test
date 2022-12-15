@@ -1,0 +1,9 @@
+node_modules/
+dist/
+coverage/
+*-lock*[.yaml, .json]
+**/*.tgz
+**/*.js
+**/*.js.map
+**/*.d.ts
+!release.config.js
